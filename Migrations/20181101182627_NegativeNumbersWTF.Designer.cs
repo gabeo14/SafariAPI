@@ -9,8 +9,8 @@ using SafariAPI;
 namespace SafariAPI.Migrations
 {
     [DbContext(typeof(SafariAPIContext))]
-    [Migration("20181031224559_AddedSeenAnimalsAndSeenAnimalsData")]
-    partial class AddedSeenAnimalsAndSeenAnimalsData
+    [Migration("20181101182627_NegativeNumbersWTF")]
+    partial class NegativeNumbersWTF
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace SafariAPI.Migrations
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            modelBuilder.Entity("SafariApi.SeenAnimals", b =>
+            modelBuilder.Entity("SafariApi.Models.SeenAnimals", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -36,13 +36,13 @@ namespace SafariAPI.Migrations
                     b.ToTable("SeenAnimals");
 
                     b.HasData(
-                        new { Id = 1, CountOfTimesSeen = 3, LocationOfLastSeen = "Umbrella Acacias", Species = "Springbok" },
-                        new { Id = 2, CountOfTimesSeen = 5, LocationOfLastSeen = "Watering Hole", Species = "Spotted Hyena" },
-                        new { Id = 3, CountOfTimesSeen = 6, LocationOfLastSeen = "Rock Outcrop", Species = "Meerkat" },
-                        new { Id = 4, CountOfTimesSeen = 1, LocationOfLastSeen = "Termite Mound", Species = "Aardvark" },
-                        new { Id = 5, CountOfTimesSeen = 3, LocationOfLastSeen = "Watering Hole", Species = "Wildebeest" },
-                        new { Id = 6, CountOfTimesSeen = 2, LocationOfLastSeen = "Rock Outcrop", Species = "African Rock Python" },
-                        new { Id = 7, CountOfTimesSeen = 4, LocationOfLastSeen = "Umbrella Acacias", Species = "Grant's Gazelle" }
+                        new { Id = -1, CountOfTimesSeen = 3, LocationOfLastSeen = "Umbrella Acacias", Species = "Springbok" },
+                        new { Id = -2, CountOfTimesSeen = 5, LocationOfLastSeen = "Watering Hole", Species = "Spotted Hyena" },
+                        new { Id = -3, CountOfTimesSeen = 6, LocationOfLastSeen = "Rock Outcrop", Species = "Meerkat" },
+                        new { Id = -4, CountOfTimesSeen = 1, LocationOfLastSeen = "Termite Mound", Species = "Aardvark" },
+                        new { Id = -5, CountOfTimesSeen = 3, LocationOfLastSeen = "Watering Hole", Species = "Wildebeest" },
+                        new { Id = -6, CountOfTimesSeen = 2, LocationOfLastSeen = "Rock Outcrop", Species = "African Rock Python" },
+                        new { Id = -7, CountOfTimesSeen = 4, LocationOfLastSeen = "Umbrella Acacias", Species = "Grant's Gazelle" }
                     );
                 });
 #pragma warning restore 612, 618

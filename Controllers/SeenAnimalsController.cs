@@ -13,12 +13,20 @@ namespace SafariAPI.Controllers
   {
 
     [HttpGet]
-    // https://localhost:5001/api/SeenAnimals 
-    // ordered by times seen
+    // https://localhost:5001/api/SeenAnimals
     public IEnumerable<SeenAnimals> Get()
     {
       var db = new SafariAPIContext();
-      return db.SeenAnimals.OrderBy(o => o.CountOfTimesSeen);
+      return db.SeenAnimals;
+    }
+
+    [HttpPost]
+    public ActionResult<SeenAnimals> Post([FromBody] SeenAnimals seenAnimals)
+    {
+      var db = new SafariAPIContext();
+      db.SeenAnimals.Add(seenAnimals);
+      db.SaveChanges();
+      return seenAnimals;
     }
   }
 }

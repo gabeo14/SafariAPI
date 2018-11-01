@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace SafariAPI.Migrations
 {
-    public partial class AddedSeenAnimalsAndSeenAnimalsData : Migration
+    public partial class NegativeNumbersWTF : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,13 +27,13 @@ namespace SafariAPI.Migrations
                 columns: new[] { "Id", "CountOfTimesSeen", "LocationOfLastSeen", "Species" },
                 values: new object[,]
                 {
-                    { 1, 3, "Umbrella Acacias", "Springbok" },
-                    { 2, 5, "Watering Hole", "Spotted Hyena" },
-                    { 3, 6, "Rock Outcrop", "Meerkat" },
-                    { 4, 1, "Termite Mound", "Aardvark" },
-                    { 5, 3, "Watering Hole", "Wildebeest" },
-                    { 6, 2, "Rock Outcrop", "African Rock Python" },
-                    { 7, 4, "Umbrella Acacias", "Grant's Gazelle" }
+                    { -1, 3, "Umbrella Acacias", "Springbok" },
+                    { -2, 5, "Watering Hole", "Spotted Hyena" },
+                    { -3, 6, "Rock Outcrop", "Meerkat" },
+                    { -4, 1, "Termite Mound", "Aardvark" },
+                    { -5, 3, "Watering Hole", "Wildebeest" },
+                    { -6, 2, "Rock Outcrop", "African Rock Python" },
+                    { -7, 4, "Umbrella Acacias", "Grant's Gazelle" }
                 });
         }
 
